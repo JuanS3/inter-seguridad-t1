@@ -12,7 +12,6 @@ DATABASE_PATH = 'db/series-tiempo.sqlite'
 
 def get_db_connection():
     conn = sqlite3.connect(DATABASE_PATH)
-    print('Hola')
     return conn
 
 
@@ -41,7 +40,7 @@ async def get_catalogo(catalogo: str):
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@app.get('/serie_titulo')
+@app.get('/serie_titulo/{titulo}')
 async def get_serie_titulo(titulo: str):
     try:
         conn = get_db_connection()
