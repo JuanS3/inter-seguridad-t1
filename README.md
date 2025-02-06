@@ -1,14 +1,14 @@
 # **Taller: Inyección SQL Básica - Practica**
 
 ## **Introducción**
-El objetivo de este taller es permitir que los estudiantes practiquen y comprendan conceptos básicos de seguridad en aplicaciones web, específicamente cómo una inyección SQL puede afectar la integridad de una base de datos y exponer información sensible. A través del desarrollo de un API vulnerable y la simulación de un ataque de inyección SQL, los estudiantes podrán aprender a identificar puntos débiles y extraer información.
+El objetivo de este taller es permitir que practiquen y comprendan conceptos básicos de seguridad en aplicaciones web, específicamente cómo una inyección SQL puede afectar la integridad de una base de datos y exponer información sensible. A través del desarrollo de un API vulnerable y la simulación de un ataque de inyección SQL, en este taller, podrán aprender a identificar puntos débiles y extraer información.
 
 ---
 
 
 ## **1. Teoría Básica**
 ### ¿Qué es una inyección SQL?
-Una inyección SQL es un tipo de vulnerability en las aplicaciones web que permite a un atacante ejecutar código malicioso en la base de datos de la aplicación, lo cual puede dar acceso a información sensible, alterar datos o causar daños.
+Una inyección SQL es un tipo de vulnerabilidad en las aplicaciones web que permite a un atacante ejecutar código malicioso en la base de datos de la aplicación, lo cual puede dar acceso a información sensible, alterar datos o causar daños.
 
 ### ¿Por qué es importante esta seguridad?
 Las inyecciones SQL son una de las amenazas más comunes en las aplicaciones web. Aunque los desarrolladores suelen intentar prevenirlo, es fundamental entender cómo funciona para poder proteger mejor tus aplicaciones.
@@ -19,7 +19,6 @@ Las inyecciones SQL son una de las amenazas más comunes en las aplicaciones web
 Para este taller, utilizaremos:
 - **FastAPI**: Para crear un API simple y vulnerable.
 - **SQLite**: Como base de datos, ya que es ligero y fácil de manejar.
-- **ORM (Object Relational Mapping)**: Usaremos SQLAlchemy para interactuar con la base de datos.
 
 ---
 
@@ -28,19 +27,21 @@ Para este taller, utilizaremos:
 ### **1. Crear el entorno virtual**
 
 ```bash
-python3 -m venv venv
+python -m venv .venv
 ```
 
 ### **2. Activar el entorno virtual**
 
-*** Desde sistemas basados en Unix ***
+***Desde sistemas basados en Unix***
 ```bash
-source venv/bin/activate
+source .venv/bin/activate
 ```
 
-*** Desde Windows ***
+***Desde Windows***
 ```bash
-venv\Scripts\activate
+cd .venv/Scripts
+activate.bat
+cd ../..
 ```
 
 ### **3. Instalar las dependencias**
@@ -78,15 +79,15 @@ Si bien se desconoce la el valor que cada endpoint puede recibir, vamos a intent
 
 ### **3. Preguntas Generadoras**
 
-¿Cómo podrías descubrir la estructura de la base de datos?
-¿Qué información podría ser sensible en este sistema?
-¿Cómo probarías si un endpoint es vulnerable a inyección SQL?
+- ¿Cómo podrías descubrir la estructura de la base de datos?
+- ¿Qué información podría ser sensible en este sistema?
+- ¿Cómo probarías si un endpoint es vulnerable a inyección SQL?
 
 ### **4. Metodología de Análisis**
 
-No busques seguir pasos exactos
-Desarrolla tu propia estrategia de investigación
-Documenta cada paso y observación
+- No busques seguir pasos exactos
+- Desarrolla tu propia estrategia de investigación
+- Documenta cada paso y observación
 
 ---
 
